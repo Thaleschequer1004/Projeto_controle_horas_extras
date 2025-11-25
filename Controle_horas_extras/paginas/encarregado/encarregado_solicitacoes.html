@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minhas Solicitações - Encarregado</title>
+    <!-- Caminho sobe 2 níveis -->
+    <link rel="shortcut icon" href="../../imagens/favoicon_fortes.jpeg" type="image/jpeg">
+    <!-- CSS Local -->
+    <link rel="stylesheet" href="style_encarregado.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+
+    <div class="layout-container">
+        
+        <!-- SIDEBAR ENCARREGADO -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <img src="../../imagens/logo_fortes_engenharia.jpeg" alt="Fortes Engenharia" class="logo-sidebar">
+            </div>
+
+            <nav class="sidebar-nav">
+                <!-- Item Ativo -->
+                <a href="#" class="nav-item active">
+                    <i class="fas fa-home"></i> Minhas Solicitações
+                </a>
+                <a href="encarregado_nova_solicitacao.html" class="nav-item">
+                    <i class="fas fa-plus-circle"></i> Nova Solicitação
+                </a>
+                <a href="encarregado_consultar.html" class="nav-item">
+                    <i class="fas fa-clock"></i> Consultar Horas
+                </a>
+            </nav>
+
+            <div class="sidebar-footer">
+                <div class="user-info">
+                    <!-- Iniciais CH de Claudio Henrique -->
+                    <div class="avatar">CH</div>
+                    <div>
+                        <strong>Claudio Henrique</strong>
+                        <span>Encarregado</span>
+                    </div>
+                </div>
+
+                <!-- Botão Configurações -->
+                <a href="config_encarregado.html" class="btn-config">
+                    <i class="fas fa-cog"></i> Configurações
+                </a>
+
+                <!-- Botão Sair -->
+                <a href="../../login/login.html" class="btn-sair">
+                    <i class="fas fa-sign-out-alt"></i> Sair
+                </a>
+                <div class="version">Versão 1.0.0</div>
+            </div>
+        </aside>
+
+        <!-- CONTEÚDO PRINCIPAL (Empty State) -->
+        <main class="content empty-state-container">
+            
+            <div class="empty-state-box">
+                <!-- Ícone de Alerta -->
+                <i class="fas fa-exclamation-circle empty-icon"></i>
+                <h2>Você não possui nenhuma solicitação ativa no momento</h2>
+            </div>
+
+        </main>
+    </div>
+
+    <!-- JS Local -->
+    <script src="script_encarregado.js"></script>
+</body>
+</html>

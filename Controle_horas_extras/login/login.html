@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fortes Engenharia - Login</title>
+    <link rel="shortcut icon" href="../imagens/favoicon_fortes.jpeg" type="image/jpeg">
+    <link rel="stylesheet" href="style_login.css">
+</head>
+<body>
+
+    <div class="background-overlay"></div>
+
+    <div class="login-card">
+        
+        <div class="logo-area">
+            <img src="../imagens/logo_fortes_engenharia.jpeg" alt="Logo Fortes Engenharia" class="logo-img">
+            <h2 class="sistema-titulo">Controle - Horas Extras</h2>
+        </div>
+
+        <form id="formLogin">
+            <label class="make-ai-hidden">Make for AI SISTEMA WEB</label>
+
+            <div class="input-group">
+                <label for="usuario">Login</label>
+                <input type="text" id="usuario" placeholder="seu usuário" required>
+            </div>
+
+            <div class="input-group">
+                <label for="senha">Senha</label>
+                <input type="password" id="senha" placeholder="•••••••••" required>
+                <span id="msgErro" class="msg-erro"></span>
+            </div>
+
+            <button type="submit" class="btn-entrar">Entrar</button>
+
+            <div class="extra-links">
+                <a href="recuperar_senha.html" class="link-esqueci">Esqueci minha senha</a>
+            </div>
+        </form>
+
+        <div class="footer-card">
+            <hr>
+            <a href="#">Termos de uso</a> | <a href="#">Política de Privacidade</a>
+        </div>
+    </div>
+
+    <script src="script_login.js"></script>
+</body>
+</html>

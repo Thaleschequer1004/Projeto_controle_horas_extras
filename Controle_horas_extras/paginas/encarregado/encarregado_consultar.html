@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consultar Horas - Encarregado</title>
+    <link rel="shortcut icon" href="../../imagens/favoicon_fortes.jpeg" type="image/jpeg">
+    <link rel="stylesheet" href="style_encarregado.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+
+    <div class="layout-container">
+        
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <img src="../../imagens/logo_fortes_engenharia.jpeg" alt="Fortes Engenharia" class="logo-sidebar">
+            </div>
+
+            <nav class="sidebar-nav">
+                <a href="encarregado_solicitacoes.html" class="nav-item">
+                    <i class="fas fa-home"></i> Minhas Solicitações
+                </a>
+                <a href="encarregado_nova_solicitacao.html" class="nav-item">
+                    <i class="fas fa-plus-circle"></i> Nova Solicitação
+                </a>
+                <!-- Item Ativo -->
+                <a href="#" class="nav-item active">
+                    <i class="fas fa-clock"></i> Consultar Horas
+                </a>
+            </nav>
+
+            <div class="sidebar-footer">
+                <div class="user-info">
+                    <div class="avatar">CH</div>
+                    <div>
+                        <strong>Claudio Henrique</strong>
+                        <span>Encarregado</span>
+                    </div>
+                </div>
+                <a href="config_encarregado.html" class="btn-config">
+                    <i class="fas fa-cog"></i> Configurações
+                </a>
+                <a href="../../login/login.html" class="btn-sair">
+                    <i class="fas fa-sign-out-alt"></i> Sair
+                </a>
+                <div class="version">Versão 1.0.0</div>
+            </div>
+        </aside>
+
+        <!-- CONTEÚDO -->
+        <main class="content">
+            
+            <header class="top-bar">
+                <h2>Consultar Horas Extras</h2>
+                <p>Visualize e confirme suas horas extras trabalhadas</p>
+            </header>
+
+            <!-- Cards de Resumo -->
+            <section class="cards-container">
+                <div class="card-resumo">
+                    <h3>Total de Horas</h3>
+                    <div class="valor azul" id="totalHoras">4h</div>
+                </div>
+                <div class="card-resumo">
+                    <h3>Confirmadas</h3>
+                    <div class="valor verde" id="contadorConfirmadas">2</div>
+                </div>
+                <div class="card-resumo">
+                    <h3>Pendentes</h3>
+                    <div class="valor laranja" id="contadorPendentes">1</div>
+                </div>
+            </section>
+
+            <!-- Barras de Progresso -->
+            <section class="section-container">
+                <h3>Horas por Obra</h3>
+                <div class="progress-item">
+                    <div class="progress-label">
+                        <span>Obra Vitória Marina</span>
+                        <span>6h</span>
+                    </div>
+                    <div class="progress-bar-bg">
+                        <div class="progress-bar-fill" style="width: 60%;"></div>
+                    </div>
+                </div>
+                
+                <div class="progress-item">
+                    <div class="progress-label">
+                        <span>Obra Ponte Norte</span>
+                        <span>0h</span>
+                    </div>
+                    <div class="progress-bar-bg">
+                        <div class="progress-bar-fill" style="width: 0%;"></div>
+                    </div>
+                </div>
+
+                <div class="progress-item">
+                    <div class="progress-label">
+                        <span>Obra Centro Logístico</span>
+                        <span>0h</span>
+                    </div>
+                    <div class="progress-bar-bg">
+                        <div class="progress-bar-fill" style="width: 0%;"></div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Filtros e Tabela -->
+            <section class="section-container">
+                <div class="filtros-area">
+                    <div class="filtro-group">
+                        <label>Obra</label>
+                        <select id="filtroObra">
+                            <option value="todas">Todas as obras</option>
+                            <option value="Obra Vitória Marina">Obra Vitória Marina</option>
+                            <option value="Obra Ponte Norte">Obra Ponte Norte</option>
+                        </select>
+                    </div>
+                    <div class="filtro-group">
+                        <label>Data Início</label>
+                        <input type="date" id="dataInicio">
+                    </div>
+                    <div class="filtro-group">
+                        <label>Data Fim</label>
+                        <input type="date" id="dataFim">
+                    </div>
+                    <button onclick="limparFiltros()" class="btn-limpar">Limpar</button>
+                </div>
+
+                <h3>Registros Detalhados</h3>
+                
+                <div class="table-responsive">
+                    <table class="tabela-horas" id="tabelaRegistros">
+                        <thead>
+                            <tr>
+                                <th>Data</th>
+                                <th>Obra</th>
+                                <th>Horário</th>
+                                <th>Total Horas</th>
+                                <th>Status</th>
+                                <th>Ação</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>14/11/2025</td>
+                                <td>Obra Vitória Marina <br><span class="small-code">VM-2025</span></td>
+                                <td>17:00 - 19:00</td>
+                                <td>2h</td>
+                                <td><span class="badge confirmada">Confirmada</span></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>09/11/2025</td>
+                                <td>Obra Vitória Marina <br><span class="small-code">VM-2025</span></td>
+                                <td>18:00 - 20:00</td>
+                                <td>2h</td>
+                                <td><span class="badge confirmada">Confirmada</span></td>
+                                <td></td>
+                            </tr>
+                            <tr id="linhaPendente">
+                                <td>07/11/2025</td>
+                                <td>Obra Vitória Marina <br><span class="small-code">VM-2025</span></td>
+                                <td>17:30 - 19:30</td>
+                                <td>2h</td>
+                                <td id="celulaStatus"><span class="badge pendente">Pendente</span></td>
+                                <td id="celulaAcao"><button class="btn-acao" onclick="abrirModal()">Confirmar presença</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p id="msgSemResultados" style="display:none; text-align:center; margin-top:20px; color:#666;">Nenhum registro encontrado.</p>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- MODAL -->
+    <div id="modalConfirmacao" class="modal-overlay">
+        <div class="modal-content">
+            <span class="close-modal" onclick="fecharModal()">&times;</span>
+            <h3>Confirmar Presença</h3>
+            <p>Escolha um método de confirmação de presença:</p>
+            
+            <div class="modal-body">
+                <div class="biometria-area">
+                    <div class="icon-bio" id="iconeBio">🖐️</div> 
+                    <h4>Biometria Digital</h4>
+                    <p id="textoBio">Posicione o dedo no sensor biométrico</p>
+                    <button class="btn-validar" onclick="validarBiometria()">Validar Biometria</button>
+                </div>
+                <div class="divider">OU</div>
+                <div class="codigo-area">
+                    <label>Código de Confirmação</label>
+                    <input type="text" placeholder="Digite o código recebido">
+                    <p class="hint">Código enviado para seu dispositivo móvel</p>
+                </div>
+            </div>
+
+            <div class="modal-footer">
+                <button class="btn-cancelar" onclick="fecharModal()">Cancelar</button>
+                <button class="btn-confirmar-cod">Confirmar com Código</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script_encarregado.js"></script>
+</body>
+</html>
