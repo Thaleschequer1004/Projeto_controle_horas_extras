@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fortes Engenharia - Configurações</title>
+    <link rel="shortcut icon" href="../../imagens/favoicon_fortes.jpeg" type="image/jpeg">
+    <link rel="stylesheet" href="style_tec_config.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="layout-container">
+
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <img src="../../imagens/logo_fortes_engenharia.jpeg" alt="Fortes Engenharia" class="logo-sidebar">
+            </div>
+
+            <nav class="sidebar-nav">
+                <a href="./tecnico_minhas_horas.html" class="nav-item">
+                    <i class="fas fa-clock"></i> Minhas Horas
+                </a>
+
+            </nav>
+
+            <div class="sidebar-footer">
+                <div class="user-info">
+                    <div class="avatar">TC</div>
+                    <div>
+                        <strong>Thales Chequer</strong>
+                        <span>Técnico</span>
+                    </div>
+                </div>
+
+                <a href="#" class="btn-config active-btn">
+                    <i class="fas fa-cog"></i> Configurações
+                </a>
+
+                <a href="../login/login.html" class="btn-sair">
+                    <i class="fas fa-sign-out-alt"></i> Sair
+                </a>
+                <div class="version">Versão 1.0.0</div>
+            </div>
+        </aside>
+
+        <main class="content">
+
+            <header class="top-bar">
+                <h2>Configurações</h2>
+                <p>Personalize sua experiência de uso</p>
+            </header>
+
+            <section class="config-card">
+                <div class="card-header">
+                    <h3><i class="fas fa-paint-brush"></i> Aparência</h3>
+                </div>
+
+                <div class="config-item">
+                    <div class="info">
+                        <h4>Modo Escuro</h4>
+                        <p>Alternar entre tema claro e escuro para descanso visual.</p>
+                    </div>
+                    <label class="switch">
+                        <input type="checkbox" id="themeToggle">
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+            </section>
+
+            <section class="config-card">
+                <div class="card-header">
+                    <h3><i class="fas fa-bell"></i> Notificações</h3>
+                </div>
+
+                <div class="config-item">
+                    <div class="info">
+                        <h4>Alertas de E-mail</h4>
+                        <p>Receber atualizações sobre status das horas extras.</p>
+                    </div>
+                    <label class="switch">
+                        <input type="checkbox" checked>
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+
+                <div class="config-item">
+                    <div class="info">
+                        <h4>Lembretes de Ponto</h4>
+                        <p>Ser avisado caso esqueça de lançar horas.</p>
+                    </div>
+                    <label class="switch">
+                        <input type="checkbox">
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+            </section>
+
+            <section class="config-card">
+                <div class="card-header">
+                    <h3><i class="fas fa-user-shield"></i> Segurança</h3>
+                </div>
+
+                <div class="config-item">
+                    <div class="info">
+                        <h4>Alterar Senha</h4>
+                        <p>Recomendamos trocar sua senha a cada 3 meses.</p>
+                    </div>
+                    <button class="btn-acao-secundaria">Trocar Senha</button>
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <script src="script_tec_config.js"></script>
+</body>
+
+</html>
