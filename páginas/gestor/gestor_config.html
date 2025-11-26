@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regras - Gestor</title>
+    <link rel="shortcut icon" href="../../imagens/favoicon_fortes.jpeg" type="image/jpeg">
+    <link rel="stylesheet" href="style_config_gestor.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="layout-container">
+        <aside class="sidebar">
+            <div class="sidebar-header"><img src="../../imagens/logo_fortes_engenharia.jpeg" class="logo-sidebar"></div>
+            <nav class="sidebar-nav">
+                <a href="gestor_dashboard.html" class="nav-item"><i class="fas fa-chart-line"></i> Dashboard <span class="notification-badge" id="badgeSidebar">2</span>
+                </a></a>
+                <a href="gestor_relatorios.html" class="nav-item"><i class="fas fa-file-alt"></i> Relatórios</a>
+            </nav>
+            <div class="sidebar-footer">
+                <div class="user-info">
+                    <div class="avatar">JP</div>
+                    <div class="user-text"><strong>João Pedro</strong><span>Gestor</span></div>
+                </div>
+                <a href="gestor_config.html" class="btn-config"><i class="fas fa-sliders-h"></i> Configurações</a>
+                <a href="../login/login.html" class="btn-sair"><i class="fas fa-sign-out-alt"></i> Sair</a>
+            </div>
+        </aside>
+        <main class="content">
+            <header class="top-bar">
+                <h2>Configurações</h2>
+                <p>Personalize sua experiência de uso</p>
+            </header>
+
+            <section class="config-card">
+                <div class="card-header">
+                    <h3><i class="fas fa-paint-brush"></i> Aparência</h3>
+                </div>
+                <div class="config-item">
+                    <div class="info">
+                        <h4>Modo Escuro</h4>
+                        <p>Alternar entre tema claro e escuro para descanso visual.</p>
+                    </div>
+                    <label class="switch">
+                        <input type="checkbox" id="themeToggle">
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+            </section>
+
+            <section class="config-card">
+                <div class="card-header">
+                    <h3><i class="fas fa-bell"></i> Notificações</h3>
+                </div>
+
+                <div class="config-item">
+                    <div class="info">
+                        <h4>Alertas de E-mail</h4>
+                        <p>Receber atualizações sobre status das horas extras.</p>
+                    </div>
+                    <label class="switch">
+                        <input type="checkbox" checked>
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+            </section>
+
+            <section class="config-card">
+                <div class="card-header">
+                    <h3><i class="fas fa-user-shield"></i> Segurança</h3>
+                </div>
+                <div class="config-item">
+                    <div class="info">
+                        <h4>Alterar Senha</h4>
+                        <p>Recomendamos trocar sua senha a cada 3 meses.</p>
+                    </div>
+                    <button class="btn-acao-secundaria">Trocar Senha</button>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="script_config_gestor.js"></script>
+</body>
+
+</html>
